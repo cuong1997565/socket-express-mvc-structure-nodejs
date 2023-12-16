@@ -4,5 +4,6 @@ if ! type pm2 > /dev/null
             then
                 sudo npm install -g pm2 && pm2 start ./index.js --name=nodejs-backend
             else
-                sudo npm install -g pm2 && pm2 start ./index.js --name=nodejs-backend &&  pm2 restart nodejs-backend
+                sudo npm install -g pm2 && pm2 start ./index.js --name=nodejs-backend 
+                sudo npm restart nodejs-backend
 fi
