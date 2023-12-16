@@ -25,4 +25,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: pm2 restart nodeodejs-backend
+    - run: if ! type pm2 > /dev/null
+            then
+                sudo npm install -g pm2 && pm2 start ./app.js --name nodeodejs-backend
+            else
+                pm2 restart nodeodejs-backend
+          fi
