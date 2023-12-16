@@ -5,7 +5,7 @@ const {homepage, message} = require('../controllers/chat.controller')
 route.get("/checkstatus", (req, res, next) => {
     return res.status(200).json({
         "status": "success",
-        "message": "api ok"
+        "message": "api ok12345"
     })
 })
 
