@@ -5,7 +5,7 @@ const io = require('socket.io')(http, {
     origin: "*"
   }
 });
-const port = process.env.PORT || 3000;
+const port =  3000;
 const SocketServices = require('./src/services/chat.service')
 
 // can chu y toi khai niem global duoc gioi thieu trong video 
